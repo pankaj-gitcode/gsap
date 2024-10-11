@@ -49,14 +49,27 @@ export default function MainApp(){
       ]
 
     return(<>
-        <div>
+        <div className='pb-7 bg-slate-500 '>
             {
                 animation.map((elem,index)=>
-                    <ol key={index}>
-                        <li>{index+1}</li>
-                        <li>{elem.title}</li>
-                        <li>{elem.description}</li>
-                        <li onClick={()=>navigateTo(`${elem.path}`)} className='cursor-pointer'>{elem.path}</li>
+                    <ol key={index} className="flex flex-col gap-2 pl-2">
+                        
+                        <li className='pt-8 text-5xl font-semibold'>
+                            {index+1}. {elem.title}
+                        </li>
+
+                        <li className='text-2xl'>
+                            {elem.description}
+                        </li>
+
+                        <li className='text-xl '>
+                            <span onClick={()=>navigateTo(`${elem.path}`)} className='cursor-pointer'>
+                                    {elem.path}
+                                <span className='text-3xl pl-1 rounded-full'>
+                                    ↗️
+                                </span>
+                            </span>
+                        </li>
                     </ol>
                 )
             }
