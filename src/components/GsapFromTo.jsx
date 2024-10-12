@@ -9,7 +9,7 @@ export default function GsapFromTO(){
             rotate:1,
         }, 
         {
-            x:720,
+            x:180,
             y:180,
             repeat:-1,
             yoyoEase:true,
