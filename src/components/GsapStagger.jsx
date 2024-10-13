@@ -9,9 +9,17 @@ export default function GsapStagger(){
             y:270,
             repeat:-1,
             yoyoEase:true,
+            repeatDelay:1,
             duration:2,
             ease: 'circ.inOut',
-            stagger:0.2
+            // borderRadius:'100%',
+            // stagger:0.2,
+            stagger:{
+                amount:1.2,
+                grid:[2,1],
+                from:'start',
+                axis:'y'
+            }
         })
     }, [])
 
