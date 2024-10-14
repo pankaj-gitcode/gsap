@@ -15,8 +15,9 @@ export default function GsapStagger(){
             // borderRadius:'100%',
             // stagger:0.2,
             stagger:{
-                amount:1.2,
-                grid:[2,1],
+                // amount:1.2,
+                each:1.2,
+                grid:[2,2],
                 from:'start',
                 axis:'y'
             }
