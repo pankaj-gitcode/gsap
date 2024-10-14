@@ -3,11 +3,13 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import MainApp from './components/MainApp';
 
 
+
 const GsapTo = lazy(()=>import('./components/GsapTo'));
 const GsapFrom = lazy(()=>import('./components/GsapFrom'));
 const GsapFromTo = lazy(()=>import('./components/GsapFromTo'));
 const GsapTimeline = lazy(()=>import('./components/GsapTimeline'));
 const GsapStagger = lazy(()=>import('./components/GsapStagger'));
+const GsapScrollTrigger = lazy(()=>import('./components/GsapScrollTrigger'))
 
 export default function App(){
   return(<>
@@ -21,6 +23,7 @@ export default function App(){
           <Route path='/gsapfromto' element={<GsapFromTo />} />
           <Route path='/gsaptimeline' element={<GsapTimeline />} />
           <Route path='/gsapstagger' element={<GsapStagger />} />
+          <Route path='gsapscrolltrigger' element={<GsapScrollTrigger/>} />
         </Routes>
       </BrowserRouter>
     </Suspense>
