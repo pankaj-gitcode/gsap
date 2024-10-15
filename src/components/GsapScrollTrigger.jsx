@@ -4,12 +4,17 @@ import gsap from 'gsap'
 import React from 'react'
 
 export default function GsapScrollTrigger(){
+    // register the scroll trigger plugin
+    gsap.registerPlugin(ScrollTrigger);
     useGSAP(()=>{
         gsap.to('#c', {
-            ScrollTrigger:'#c',
             x:400,
             rotation:360,
-            duration:3
+            duration:3,
+            scrollTrigger:{
+                trigger:'#c',
+                toggleActions: "restart pause restart pause"
+            }
         })
     }, [])
     return(<>
