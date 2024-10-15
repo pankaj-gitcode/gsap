@@ -17,23 +17,12 @@ export default function GsapScrollTrigger(){
                 markers:true,
                 start: 'top 500', // trigger top level (box) reaches 500px of viewport
                 end:'+=100',     // end after scrolling 100px beyond the start 
-                scrub: 1.5
+                scrub: 2,
+                pin:true,
+                pinSpacing:false
             }
         })
 
-        gsap.to('.ghost', {
-            x:400,
-            rotation:360,
-            duration:2,
-            scrollTrigger:{
-                trigger:'#c',
-                toggleActions: "restart pause reverse pause",
-                markers:true,
-                start: 'top 500', // trigger top level (box) reaches 500px of viewport
-                end:'+=100',     // end after scrolling 100px beyond the start 
-                scrub: true
-            }
-        })
 
     }, [])
     return(<>
