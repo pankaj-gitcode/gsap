@@ -16,7 +16,8 @@ export default function GsapScrollTrigger(){
                 toggleActions: "restart pause reverse pause",
                 markers:true,
                 start: 'top 500', // trigger top level (box) reaches 500px of viewport
-                end:'+=100',     // end after scrolling 100px beyond the start 
+                // end:'+=100',     // end after scrolling 100px beyond the start 
+                end: ()=>"+="+ document.querySelector('#c').offsetWidth,
                 scrub: 2,
                 pin:true,
                 pinSpacing:false
