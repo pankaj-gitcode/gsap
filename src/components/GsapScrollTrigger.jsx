@@ -17,7 +17,7 @@ export default function GsapScrollTrigger(){
                 markers:true,
                 start: 'top 500', // trigger top level (box) reaches 500px of viewport
                 // end:'+=100',     // end after scrolling 100px beyond the start 
-                end: ()=>"+="+ document.querySelector('#c').offsetWidth,
+                end: ()=>"+="+ document.querySelector('#c').offsetWidth, // the exact width of the box
                 scrub: 2,
                 pin:true,
                 pinSpacing:false
