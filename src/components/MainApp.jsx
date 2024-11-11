@@ -46,6 +46,12 @@ export default function MainApp(){
           description: "Learn how to animate text with GSAP.",
           path: "/gsaptext",
         },
+        {
+          title: "ScrollTrigger",
+          description:
+            "The ScrollTrigger plugin is used to trigger animations based on the scroll position.",
+          path: "/scrolltrigger",
+        },
       ]
 
     return(<>
