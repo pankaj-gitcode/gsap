@@ -1,30 +1,18 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { images } from '../utils/utilities'
-
-export default class ScrollTrigger extends Component {
-  render() {
-    return (
-      <div id='parent' className='h-[460vh] w-full bg-black'>
-        <div id='container' className='flex items-center justify-center  w-full'>
-            <div id='card' className='w-[60vw] flex items-center justify-center flex-col p-20 '>
-                {
-                    images.map(elem=>
-                    <div key='elem' className='w-[40vw] lg:w-[27vw] bg-[#2E231D] mt-2 flex flex-col items-center justify-center py-20 rounded-xl'>
-                        <img src={elem} alt={elem} className='h-28 aspect-square'/>
-
-                        <h1 className='text-[#ada29b] text-3xl text-center pt-2 font-thin'>The <span className='text-white font-bold '><br/>Algorithm</span></h1>
-                        
-                        <p className='text-xs p-5 text-white text-center leading-5'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil dolorem Lorem ipsum dolor sit amet consectetur..</p>
-
-                    </div>
-                    )
-                }
-            </div>
-        </div>
-        {/* <img src='/images/rgh.png' alt="" /> */}
+export default function ScrollTrigger(){
+  return(<>
+    <div className='h-screen bg-black flex items-center justify-center '>
+      <div className='bg-[#2E231D] flex flex-col items-center justify-center w-[36vw] lg:w-[22vw] py-20 px-5'>
+          
+          <img src={images[0]} alt={images[0]} className='w-[180px] aspect-square'/>
+          <h1 className='text-[#ada29b] text-3xl font-thin text-center'>The 
+            <span className='text-white font-bold'><br/>Algorithm</span>
+          </h1>
+          <p className='text-[#ada29b] text-xs py-6'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt excepturi amet quas.</p>
       </div>
-    )
-  }
+    </div>
+  </>)
 }
 
 
