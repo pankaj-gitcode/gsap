@@ -10,7 +10,7 @@ const GsapFromTo = lazy(()=>import('./components/GsapFromTo'));
 const GsapTimeline = lazy(()=>import('./components/GsapTimeline'));
 const GsapStagger = lazy(()=>import('./components/GsapStagger'));
 const GsapScrollTrigger = lazy(()=>import('./components/GsapScrollTrigger'));
-const ScrollTrigger = lazy(()=>import('./components/ScrollTrigger'));
+const ScrollTriggerCard = lazy(()=>import('./components/ScrollTriggerCard'));
 
 export default function App(){
   return(<>
@@ -25,7 +25,7 @@ export default function App(){
           <Route path='/gsaptimeline' element={<GsapTimeline />} />
           <Route path='/gsapstagger' element={<GsapStagger />} />
           <Route path='gsapscrolltrigger' element={<GsapScrollTrigger/>} />
-          <Route path='/scrolltrigger' element={<ScrollTrigger/>}/>
+          <Route path='/scrolltrigger' element={<ScrollTriggerCard/>}/>
         </Routes>
       </BrowserRouter>
     </Suspense>
